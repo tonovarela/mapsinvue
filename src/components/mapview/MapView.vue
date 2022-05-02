@@ -48,6 +48,9 @@ export default defineComponent({
   
       mylocationMarker.addTo(map);
 
+      //Establecer el map en VUEX
+      
+
     };
     const { userLocation, isUserlocationReady } = usePlaceStore();
 
