@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 
 
-import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');" 
+import mapboxgl from 'mapbox-gl';
 mapboxgl.accessToken = 'pk.eyJ1IjoidG9ub3ZhcmVsYSIsImEiOiJjazdhdTlqczUxN3VnM2VwNTFuZTV0cWp6In0.454u4lgDsq-FdCfpv5AmnQ';
 
 if (!navigator.geolocation){

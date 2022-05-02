@@ -1,4 +1,4 @@
-
+ 
 <template>
   <div
     v-if="!isUserlocationReady"
@@ -16,6 +16,7 @@
   ></div>
 </template>
 <script  lang="ts">
+/* eslint-disable */
 import { usePlaceStore } from "@/composables/usePlacesStore";
 import { defineComponent, onMounted, ref, watch } from "vue";
 import Mapboxgl from "mapbox-gl";
