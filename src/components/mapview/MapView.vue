@@ -17,22 +17,25 @@
 </template>
 <script  lang="ts">
 /* eslint-disable */
-import { usePlaceStore } from "@/composables/usePlacesStore";
 import { defineComponent, onMounted, ref, watch } from "vue";
 import Mapboxgl from "mapbox-gl";
+
+import { usePlaceStore } from "@/composables/usePlacesStore";
+import { useMapStore } from "@/composables";
 export default defineComponent({
   name: "MapView",
   setup() {
     const mapElement = ref<HTMLDivElement>();
+    const {distance,duration,map,setMap }  = useMapStore();
 
     const initMap = async () => {
       if (!mapElement.value) return;
       if (!userLocation) return;
       await Promise.resolve();
        const map =new Mapboxgl.Map({        
-        container: mapElement.value!, // container ID
-        style: "mapbox://styles/mapbox/dark-v10", // style URL
-        center: userLocation.value, // starting position [lng, lat]
+        container: mapElement.value, // container ID
+        style: "mapbox://styles/mapbox/streets-v10", // style URL
+        center: userLocation.value!, // starting position [lng, lat]
         zoom: 15, // starting zoom
       });
 
@@ -48,6 +51,7 @@ export default defineComponent({
   
       mylocationMarker.addTo(map);
 
+       setMap(map);
       //Establecer el map en VUEX
       
 

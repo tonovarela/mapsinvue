@@ -3,9 +3,9 @@ import { MapState } from './state';
 import { StateInterface } from '../index';
 
 
-const getters: GetterTree<MapState, StateInterface> = {
-    someGetter( /* state */ ) {
-        // return true;
+const getters: GetterTree<MapState, StateInterface> = {    
+    isMapReady(state){
+        return !!state.map
     }
 }
 

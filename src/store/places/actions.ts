@@ -4,9 +4,12 @@ import { StateInterface } from '../index';
 
 
 const actions: ActionTree<PlacesState, StateInterface> = {
-    someAction( /*{ commit }, payload  */ ) {
-        // a line to prevent linter errors
+
+    async seachPlacesByTerm( { commit ,state}, queryString:string ) {
+        console.log("VUEX  "+queryString)
+        // a line o prevent linter errors
     },
+
 
     getInitialLocation( { commit } ) {
         navigator.geolocation

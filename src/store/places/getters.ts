@@ -8,10 +8,7 @@ const getters: GetterTree<PlacesState, StateInterface> = {
     
     isUserReady(  state  ) {
          return !!state.userLocation;
-    },
-    someGetter( /* state */ ) {
-        // return true;
-    }
+    }   
 }
 
 

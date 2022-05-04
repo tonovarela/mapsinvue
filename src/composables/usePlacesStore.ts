@@ -17,7 +17,8 @@ export const usePlaceStore =()=>{
         //State
         isLoading:computed(()=>store.state.places.isLoading),
         userLocation:computed(()=>store.state.places.userLocation),
-        isUserlocationReady:computed<boolean>(()=>store.getters['places/isUserReady'])
+        isUserlocationReady:computed<boolean>(()=>store.getters['places/isUserReady']),
+        searchPlacesByTerm:(term:string)=>store.dispatch('places/seachPlacesByTerm',term)
         //Getters
 
 
