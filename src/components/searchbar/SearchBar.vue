@@ -2,8 +2,7 @@
 </script>
 <template>
 <div class="searchbar-container">
-    <input class="form-control" v-model="searchTerm" type="text" placeholder="Buscar lugares ..." />        
-    {{searchTerm}}
+    <input class="form-control" v-model="searchTerm" type="text" placeholder="Buscar lugares ..." />            
     <SearchResults/>
 </div>    
 </template>
